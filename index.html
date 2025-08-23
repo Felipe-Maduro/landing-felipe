@@ -2,98 +2,93 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
-  <title>MELI Sistemas • WMS acessível e tecnológico</title>
+  <title>MELI Sistemas • Gestão de Estoque acessível e tecnológica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Recebimento, armazenagem, saldos, consultas, inventário e auditoria por usuário. WMS acessível, implantação rápida e suporte próximo.">
-  <meta property="og:title" content="MELI Sistemas • WMS acessível">
-  <meta property="og:description" content="WMS enxuto e tecnológico para PMEs: recebimento, armazenagem, saldos, consultas e inventário, com trilha por usuário.">
+  <meta name="description" content="Recebimento, armazenagem, saldos, consultas, inventário e auditoria por usuário. Gestão de Estoque acessível, implantação rápida e suporte próximo.">
+  <meta property="og:title" content="MELI Sistemas • Gestão de Estoque">
+  <meta property="og:description" content="Sistema de gestão de estoque enxuto e tecnológico para PMEs.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="img/logo.png">
   <style>
     :root{
-      --bg:#0a0d14;
-      --panel:#0f1420;
-      --ink:#e9eef5;
-      --muted:#a8b3c7;
-      --brand:#0E3A5B;  /* azul escuro do logo */
-      --accent:#FF8A00; /* laranja do logo */
-      --ok:#5df2a6;
+      --bg:#f5f7fb;
+      --panel:#ffffff;
+      --ink:#1b2333;
+      --muted:#5b6375;
+      --brand:#0E3A5B;
+      --accent:#FF8A00;
       --radius:14px;
-      --shadow:0 14px 40px rgba(0,0,0,.35);
+      --shadow:0 8px 26px rgba(14,58,91,.10);
+      --border:1px solid rgba(14,58,91,.10);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;}
     img{max-width:100%;display:block}
-    a{color:var(--ink);text-decoration:none}
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#0b121f,rgba(11,18,31,.85));backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1150px;margin:0 auto}
+    a{color:var(--brand);text-decoration:none}
+    header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1180px;margin:0 auto}
     .brand{display:flex;align-items:center;gap:10px}
-    .brand span{font-weight:800;letter-spacing:.3px}
-    .nav a{opacity:.9;margin-left:16px}
-    .btn{display:inline-block;background:var(--brand);color:#fff;border:1px solid rgba(255,255,255,.1);padding:11px 14px;border-radius:12px}
-    .btn.ghost{background:transparent;border-color:rgba(255,255,255,.2)}
-    .btn.accent{background:var(--accent);color:#1b2333}
-    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;padding:38px 20px 18px;max-width:1150px;margin:0 auto}
+    .brand span{font-weight:800;letter-spacing:.3px;color:var(--ink)}
+    .nav a{opacity:.9;margin-left:16px;color:var(--ink)}
+    .btn{display:inline-block;background:var(--brand);color:#fff;border:1px solid rgba(14,58,91,.15);padding:11px 14px;border-radius:12px}
+    .btn.ghost{background:#fff;color:var(--brand);border:1px solid rgba(14,58,91,.25)}
+    .btn.accent{background:var(--accent);color:#1b2333;border-color:rgba(255,138,0,.25)}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;padding:42px 20px 22px}
     .kicker{color:var(--muted);font-size:.95rem}
-    h1{font-size:2.4rem;line-height:1.12;margin:.3rem 0 1rem}
-    .highlight{background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+    h1{font-size:2.2rem;line-height:1.15;margin:.3rem 0 1rem}
+    .highlight{color:var(--brand)}
     .hero p{color:var(--muted)}
-    .mock{background:linear-gradient(180deg,#0f1626,#0a0d14);border:1px solid rgba(255,255,255,.06);border-radius:16px;box-shadow:var(--shadow);padding:18px;position:relative}
-    .mock::after{content:"";position:absolute;inset:-1px;border-radius:16px;pointer-events:none;background:radial-gradient(600px 120px at 40% -10%, rgba(14,58,91,.35), transparent), radial-gradient(600px 120px at 60% -10%, rgba(255,138,0,.18), transparent)}
-    .mock .bar{height:10px;border-radius:8px;background:linear-gradient(90deg,#1b2333,#0f1626)}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-    .card{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px}
-    .card strong{display:block;margin-bottom:8px;color:var(--accent)}
-    .section{padding:56px 20px;max-width:1150px;margin:0 auto}
-    .section.alt{background:#0b111c;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+    .panel{background:var(--panel);border:var(--border);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .gallery img{border-radius:12px;border:var(--border);background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.05)}
+    .section{padding:56px 0}
+    .section.alt{background:#fff;border-top:var(--border);border-bottom:var(--border)}
     h2{margin:0 0 12px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .feature{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:18px}
+    .feature{background:var(--panel);border:var(--border);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
     .feature h3{margin:0 0 6px}
     .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
-    .benefits li{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 12px;color:var(--ink)}
+    .benefits li{background:#fff;border:var(--border);border-radius:10px;padding:10px 12px;color:var(--ink);box-shadow:var(--shadow)}
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
-    .step{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px}
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .plan{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px;display:flex;flex-direction:column}
-    .plan .price{font-size:1.6rem;margin:6px 0 10px;color:var(--accent)}
-    .plan .btn{margin-top:auto}
-    .plan.featured{box-shadow:inset 0 0 0 2px rgba(255,138,0,.25);border-color:rgba(255,138,0,.45)}
+    .step{background:#fff;border:var(--border);border-radius:12px;padding:14px;box-shadow:var(--shadow)}
     form{max-width:640px}
     .row{display:flex;flex-direction:column;margin-bottom:10px}
-    input,select,textarea{background:#0d111a;border:1px solid rgba(255,255,255,.12);color:var(--ink);padding:12px;border-radius:10px}
+    input,select,textarea{background:#fff;border:1px solid rgba(14,58,91,.15);color:var(--ink);padding:12px;border-radius:10px}
     .small{font-size:.9rem;color:var(--muted)}
-    footer{padding:26px 20px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
-    .faq details{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px}
+    footer{padding:26px 20px;text-align:center;color:var(--muted);border-top:var(--border);background:#fff}
+    .faq details{background:#fff;border:var(--border);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
     .faq details+details{margin-top:10px}
     @media (max-width:1000px){
       .hero{grid-template-columns:1fr}
-      .grid-3,.steps,.pricing{grid-template-columns:1fr}
+      .grid-3,.steps{grid-template-columns:1fr}
       .benefits{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="nav">
+    <div class="nav wrap">
       <a class="brand" href="#top" aria-label="Página inicial">
-        <img src="img/logo.png" alt="MELI Sistemas - logo" width="36" height="36" style="border-radius:8px; background:#fff; padding:2px;">
-        <span>MELI Sistemas • WMS</span>
+        <img src="img/logo.png" alt="MELI Sistemas - logo" width="36" height="36">
+        <span>MELI Sistemas • Gestão de Estoque</span>
       </a>
       <nav>
         <a href="#modulos">Módulos</a>
         <a href="#ganhos">Ganhos</a>
-        <a href="#planos">Planos</a>
+        <a href="#telas">Em funcionamento</a>
         <a href="#contato" class="btn">Demonstração</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
+  <main id="top" class="wrap">
     <section class="hero">
       <div>
         <div class="kicker">Controle de estoque eficiente e acessível</div>
-        <h1>WMS enxuto para <span class="highlight">recebimento, armazenagem, saldos, consultas e inventário</span> — com trilha por usuário</h1>
+        <h1>Gestão de estoque enxuta para <span class="highlight">recebimento, armazenagem, saldos, consultas e inventário</span> — com trilha por usuário</h1>
         <p>Implantação rápida, operação simples e preço que cabe no orçamento. Ideal para pequenos e médios negócios que precisam de rastreabilidade sem complexidade.</p>
         <div style="display:flex;gap:10px;margin-top:14px">
           <a id="cta-whats-hero" class="btn accent" target="_blank" rel="noopener">Falar no WhatsApp</a>
@@ -101,24 +96,12 @@
         </div>
         <p class="small" style="margin-top:8px">Sem fidelidade • Onboarding guiado • Suporte próximo</p>
       </div>
-      <div class="mock" aria-hidden="true">
-        <div class="bar"></div>
-        <div class="cards">
-          <div class="card">
-            <strong>Recebimento</strong>
-            <span>NF 1452 • 120 un</span>
-            <span>Endereço: A1-B-03</span>
-          </div>
-          <div class="card">
-            <strong>Inventário</strong>
-            <span>Rua 3 • 95/100</span>
-            <span>Diferença: -5</span>
-          </div>
-          <div class="card">
-            <strong>Auditoria</strong>
-            <span>Usuário: João</span>
-            <span>Mov.: Ajuste 12:41</span>
-          </div>
+      <div class="panel">
+        <div class="gallery">
+          <img src="img/screen1.png" alt="Acerto de Estoque - Entrada">
+          <img src="img/screen2.png" alt="Consulta de Estoque">
+          <img src="img/screen3.png" alt="Transferência">
+          <img src="img/screen4.png" alt="Iniciar Armazenagem">
         </div>
       </div>
     </section>
@@ -164,63 +147,22 @@
       <p class="small">Valores indicativos com base em boas práticas. Resultados variam por operação e aderência aos processos.</p>
     </section>
 
-    <section class="section">
-      <h2>Como funciona</h2>
-      <div class="steps">
-        <div class="step"><strong>1. Diagnóstico</strong><br><span class="small">Fluxo atual, catálogo e endereçamento.</span></div>
-        <div class="step"><strong>2. Implantação</strong><br><span class="small">Cadastro inicial, perfis de acesso e plano de endereços.</span></div>
-        <div class="step"><strong>3. Treinamento</strong><br><span class="small">Equipe orientada para recebimento, armazenagem e inventário.</span></div>
-        <div class="step"><strong>4. Suporte</strong><br><span class="small">Acompanhamento próximo e ajustes finos.</span></div>
+    <section id="telas" class="section">
+      <h2>Em funcionamento</h2>
+      <p class="small">Algumas telas reais do sistema — simples e objetivas para operação.</p>
+      <div class="gallery">
+        <img src="img/screen5.png" alt="Histórico de Acertos">
+        <img src="img/screen2.png" alt="Consulta de Estoque">
       </div>
     </section>
 
-    <section id="planos" class="section alt">
-      <h2>Planos e preços</h2>
-      <div class="pricing">
-        <div class="plan">
-          <h3>Início</h3>
-          <p class="price">R$ 99/mês</p>
-          <ul class="small">
-            <li>1 usuário</li>
-            <li>Recebimento e Armazenagem</li>
-            <li>Relatórios básicos</li>
-            <li>Suporte por WhatsApp</li>
-          </ul>
-          <a class="btn" id="cta-inicio">Começar</a>
-        </div>
-        <div class="plan featured">
-          <h3>Essencial</h3>
-          <p class="price">R$ 149/mês</p>
-          <ul class="small">
-            <li>3 usuários</li>
-            <li>Inventário e Ajustes</li>
-            <li>Alertas de mínimos</li>
-            <li>Onboarding remoto</li>
-          </ul>
-          <a class="btn accent" id="cta-essencial">Começar</a>
-        </div>
-        <div class="plan">
-          <h3>Pro</h3>
-          <p class="price">R$ 249/mês</p>
-          <ul class="small">
-            <li>5 usuários</li>
-            <li>Relatórios avançados (ABC/Giro)</li>
-            <li>Prioridade de suporte</li>
-            <li>Roadmap compartilhado</li>
-          </ul>
-          <a class="btn" id="cta-pro">Começar</a>
-        </div>
-      </div>
-      <p class="small">Preços promocionais de lançamento. Personalizações sob orçamento.</p>
-    </section>
-
-    <section id="contato" class="section">
+    <section id="contato" class="section alt">
       <h2>Solicite uma demonstração</h2>
       <p class="small">Preencha o formulário e retornamos em até 1 dia útil.</p>
       <form id="lead" action="https://formsubmit.co/SEU_EMAIL_AQUI" method="POST">
         <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_subject" value="Lead - Demonstração MELI WMS">
+        <input type="hidden" name="_subject" value="Lead - Demonstração MELI Gestão de Estoque">
         <input type="hidden" name="_next" value="obrigado.html">
         <div class="row">
           <label for="nome">Nome</label>
@@ -262,19 +204,16 @@
   </main>
 
   <footer>
-    © <span id="y"></span> MELI Sistemas • WMS • <a id="cta-whats-footer" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    © <span id="y"></span> MELI Sistemas • Gestão de Estoque • <a id="cta-whats-footer" href="#" target="_blank" rel="noopener">WhatsApp</a>
   </footer>
 
   <script>
-    const WHATS = "5599999999999"; // 55 + DDD + número
-    const MSG = encodeURIComponent("Olá! Quero uma demonstração do MELI WMS.");
+    const WHATS = "5599999999999";
+    const MSG = encodeURIComponent("Olá! Quero uma demonstração do MELI (Gestão de Estoque).");
     const WURL = `https://wa.me/${WHATS}?text=${MSG}`;
-    ["cta-whats-hero","cta-whats-form","cta-whats-footer","cta-inicio","cta-essencial","cta-pro"].forEach(id=>{
+    ["cta-whats-hero","cta-whats-form","cta-whats-footer"].forEach(id=>{
       const el = document.getElementById(id);
-      if (el) {
-        if(id.startsWith("cta-")) el.addEventListener("click", ()=>{ window.open(WURL, "_blank", "noopener"); });
-        else el.href = WURL;
-      }
+      if (el) el.href = WURL;
     });
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
