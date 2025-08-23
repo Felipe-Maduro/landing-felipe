@@ -2,167 +2,281 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
-  <title>Desenvolvedor Terceirizado para o seu Projeto | Felipe</title>
+  <title>MELI Sistemas • WMS acessível e tecnológico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Landing page para captação de clientes: apps, sites e automação de estoque para pequenos negócios.">
+  <meta name="description" content="Recebimento, armazenagem, saldos, consultas, inventário e auditoria por usuário. WMS acessível, implantação rápida e suporte próximo.">
+  <meta property="og:title" content="MELI Sistemas • WMS acessível">
+  <meta property="og:description" content="WMS enxuto e tecnológico para PMEs: recebimento, armazenagem, saldos, consultas e inventário, com trilha por usuário.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/logo.png">
   <style>
     :root{
-      --bg:#0b0c10; --panel:#12151f; --ink:#e9eef5; --muted:#a8b3c7;
-      --brand:#ff3d6e; --accent:#5df2a6; --radius:14px;
+      --bg:#0a0d14;
+      --panel:#0f1420;
+      --ink:#e9eef5;
+      --muted:#a8b3c7;
+      --brand:#0E3A5B;  /* azul escuro do logo */
+      --accent:#FF8A00; /* laranja do logo */
+      --ok:#5df2a6;
+      --radius:14px;
+      --shadow:0 14px 40px rgba(0,0,0,.35);
     }
-    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-      font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    a{color:var(--ink)} img{max-width:100%;display:block}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px 20px}
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-    .logo{display:flex;gap:10px;align-items:center;text-decoration:none}
-    .logo span{font-weight:700}
-    .cta-top{background:var(--brand);color:#fff;border:0;padding:10px 14px;border-radius:10px;text-decoration:none}
-    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;margin-top:10px}
-    .kicker{color:var(--muted);font-size:.95rem;margin-bottom:6px}
-    h1{font-size:2.2rem;line-height:1.15;margin:.2rem 0 1rem}
-    .steps{color:var(--muted);font-size:.95rem;line-height:1.6}
-    .panel{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px}
-    form .row{display:flex;flex-direction:column;margin-bottom:10px}
-    input,select,textarea{background:#0d111a;border:1px solid rgba(255,255,255,.12);color:var(--ink);
-      padding:12px;border-radius:10px}
-    button,.btn{display:inline-block;border:0;background:var(--brand);color:#fff;padding:12px 16px;border-radius:12px;cursor:pointer}
-    .btn.sec{background:transparent;border:1px solid rgba(255,255,255,.25)}
-    .grid-cases{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .case{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;overflow:hidden}
-    .case .cap{aspect-ratio:16/9;background:#0f1422;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--muted)}
-    .case .meta{padding:10px;color:var(--muted);font-size:.95rem}
-    .section{margin-top:48px}
-    footer{margin:40px 0;color:var(--muted);text-align:center}
-    .muted{color:var(--muted)}
-    @media (max-width:1000px){.grid-cases{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:820px){
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;}
+    img{max-width:100%;display:block}
+    a{color:var(--ink);text-decoration:none}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#0b121f,rgba(11,18,31,.85));backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1150px;margin:0 auto}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand span{font-weight:800;letter-spacing:.3px}
+    .nav a{opacity:.9;margin-left:16px}
+    .btn{display:inline-block;background:var(--brand);color:#fff;border:1px solid rgba(255,255,255,.1);padding:11px 14px;border-radius:12px}
+    .btn.ghost{background:transparent;border-color:rgba(255,255,255,.2)}
+    .btn.accent{background:var(--accent);color:#1b2333}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;padding:38px 20px 18px;max-width:1150px;margin:0 auto}
+    .kicker{color:var(--muted);font-size:.95rem}
+    h1{font-size:2.4rem;line-height:1.12;margin:.3rem 0 1rem}
+    .highlight{background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{color:var(--muted)}
+    .mock{background:linear-gradient(180deg,#0f1626,#0a0d14);border:1px solid rgba(255,255,255,.06);border-radius:16px;box-shadow:var(--shadow);padding:18px;position:relative}
+    .mock::after{content:"";position:absolute;inset:-1px;border-radius:16px;pointer-events:none;background:radial-gradient(600px 120px at 40% -10%, rgba(14,58,91,.35), transparent), radial-gradient(600px 120px at 60% -10%, rgba(255,138,0,.18), transparent)}
+    .mock .bar{height:10px;border-radius:8px;background:linear-gradient(90deg,#1b2333,#0f1626)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    .card{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px}
+    .card strong{display:block;margin-bottom:8px;color:var(--accent)}
+    .section{padding:56px 20px;max-width:1150px;margin:0 auto}
+    .section.alt{background:#0b111c;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+    h2{margin:0 0 12px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:18px}
+    .feature h3{margin:0 0 6px}
+    .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
+    .benefits li{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 12px;color:var(--ink)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+    .step{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .plan{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px;display:flex;flex-direction:column}
+    .plan .price{font-size:1.6rem;margin:6px 0 10px;color:var(--accent)}
+    .plan .btn{margin-top:auto}
+    .plan.featured{box-shadow:inset 0 0 0 2px rgba(255,138,0,.25);border-color:rgba(255,138,0,.45)}
+    form{max-width:640px}
+    .row{display:flex;flex-direction:column;margin-bottom:10px}
+    input,select,textarea{background:#0d111a;border:1px solid rgba(255,255,255,.12);color:var(--ink);padding:12px;border-radius:10px}
+    .small{font-size:.9rem;color:var(--muted)}
+    footer{padding:26px 20px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
+    .faq details{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px}
+    .faq details+details{margin-top:10px}
+    @media (max-width:1000px){
       .hero{grid-template-columns:1fr}
+      .grid-3,.steps,.pricing{grid-template-columns:1fr}
+      .benefits{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a class="logo" href="./" aria-label="Página inicial">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#1b2030"/><path d="M6 15h7a3 3 0 0 0 0-6H9" stroke="url(#g)" stroke-width="2" fill="none"/><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#ff3d6e"/><stop offset="1" stop-color="#5df2a6"/></linearGradient></defs></svg>
-        <span>borderless dev</span>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Página inicial">
+        <img src="img/logo.png" alt="MELI Sistemas - logo" width="36" height="36" style="border-radius:8px; background:#fff; padding:2px;">
+        <span>MELI Sistemas • WMS</span>
       </a>
-      <a id="cta-whats-top" class="cta-top" href="#" target="_blank" rel="noopener">Enviar formulário</a>
-    </header>
+      <nav>
+        <a href="#modulos">Módulos</a>
+        <a href="#ganhos">Ganhos</a>
+        <a href="#planos">Planos</a>
+        <a href="#contato" class="btn">Demonstração</a>
+      </nav>
+    </div>
+  </header>
 
+  <main id="top">
     <section class="hero">
       <div>
-        <div class="kicker">Precisando de um app, site ou automação?</div>
-        <h1>Empreendedor, tenha um <span style="color:var(--accent)">desenvolvedor terceirizado</span> para o seu projeto</h1>
-        <p class="muted">Implantação rápida, preço acessível e suporte próximo. Ideal para pequenos negócios.</p>
-        <div class="panel steps" style="margin-top:18px">
-          <strong>Dar o próximo passo leva menos de um minuto</strong><br>
-          1 – Preencha o formulário · 2 – Receba uma ligação em até 12h · 3 – Orçamento e início do projeto
+        <div class="kicker">Controle de estoque eficiente e acessível</div>
+        <h1>WMS enxuto para <span class="highlight">recebimento, armazenagem, saldos, consultas e inventário</span> — com trilha por usuário</h1>
+        <p>Implantação rápida, operação simples e preço que cabe no orçamento. Ideal para pequenos e médios negócios que precisam de rastreabilidade sem complexidade.</p>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <a id="cta-whats-hero" class="btn accent" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a href="#contato" class="btn ghost">Solicitar Demonstração</a>
+        </div>
+        <p class="small" style="margin-top:8px">Sem fidelidade • Onboarding guiado • Suporte próximo</p>
+      </div>
+      <div class="mock" aria-hidden="true">
+        <div class="bar"></div>
+        <div class="cards">
+          <div class="card">
+            <strong>Recebimento</strong>
+            <span>NF 1452 • 120 un</span>
+            <span>Endereço: A1-B-03</span>
+          </div>
+          <div class="card">
+            <strong>Inventário</strong>
+            <span>Rua 3 • 95/100</span>
+            <span>Diferença: -5</span>
+          </div>
+          <div class="card">
+            <strong>Auditoria</strong>
+            <span>Usuário: João</span>
+            <span>Mov.: Ajuste 12:41</span>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Coluna direita: imagem + formulário -->
-      <div>
-        <div class="panel" style="margin-bottom:14px">
-          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Notebook com dashboards">
-        </div>
-
-        <div class="panel">
-          <form id="lead" action="https://formsubmit.co/maduro.felipe@outlook.com" method="POST">
-            <!-- FormSubmit -->
-            <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_subject" value="Novo lead - Landing Felipe">
-            <input type="hidden" name="_next" value="obrigado.html">
-            <div class="row">
-              <label for="nome">Nome (obrigatório)</label>
-              <input id="nome" name="Nome" required>
-            </div>
-            <div class="row">
-              <label for="tel">DDD + Telefone (obrigatório)</label>
-              <input id="tel" name="Telefone" placeholder="(DD) 9xxxx-xxxx" required>
-            </div>
-            <div class="row">
-              <label for="tipo">Você busca um site, um app, ou automação?</label>
-              <select id="tipo" name="Tipo">
-                <option>Site</option><option>Aplicativo</option><option>Automação/Integração</option><option>Outro</option>
-              </select>
-            </div>
-            <div class="row">
-              <label for="urgencia">Qual a urgência?</label>
-              <select id="urgencia" name="Urgência">
-                <option>Quero começar agora</option><option>Próximas 2 semanas</option><option>Sem pressa</option>
-              </select>
-            </div>
-            <div class="row">
-              <label for="msg">Conte um pouco do projeto</label>
-              <textarea id="msg" name="Mensagem" rows="3"></textarea>
-            </div>
-            <button type="submit">Enviar e falar comigo</button>
-            <a id="cta-whats-form" class="btn sec" href="#" target="_blank" rel="noopener" style="margin-left:8px">Falar no WhatsApp</a>
-          </form>
-          <p class="muted" style="margin-top:10px">Ao enviar, você concorda com nossa <a href="politica-privacidade.html">Política de Privacidade</a>.</p>
-        </div>
+    <section id="modulos" class="section">
+      <h2>Módulos principais</h2>
+      <div class="grid-3">
+        <article class="feature">
+          <h3>Recebimento</h3>
+          <p>Conferência por item, lote e quantidade. Registro de divergências e endereçamento inicial.</p>
+        </article>
+        <article class="feature">
+          <h3>Armazenagem</h3>
+          <p>Estrutura de rua, módulo e nível. Movimentações rastreadas por usuário.</p>
+        </article>
+        <article class="feature">
+          <h3>Controle de Saldos</h3>
+          <p>Saldos por SKU e por endereço. Bloqueio, ajuste e transferência com trilha de auditoria.</p>
+        </article>
+        <article class="feature">
+          <h3>Consultas & Relatórios</h3>
+          <p>Busca por código/descrição/endereço. Relatórios de giro, rupturas e itens parados.</p>
+        </article>
+        <article class="feature">
+          <h3>Inventário</h3>
+          <p>Inventário cíclico/geral, dupla contagem e recontagens automatizadas.</p>
+        </article>
+        <article class="feature">
+          <h3>Auditoria por Usuário</h3>
+          <p>Quem fez, o quê e quando. Log completo para conformidade e melhoria contínua.</p>
+        </article>
       </div>
+    </section>
+
+    <section id="ganhos" class="section alt">
+      <h2>Ganhos práticos para seu negócio</h2>
+      <ul class="benefits">
+        <li>▼ <strong>Rupturas</strong>: redução típica de 10–30% com alertas de mínimos e disciplina de estoque.</li>
+        <li>▲ <strong>Giro de estoque</strong>: +15–25% com visibilidade de saldos e inventário recorrente.</li>
+        <li>▼ <strong>Tempo de inventário</strong>: -40–60% com contagem guiada e recontagens automáticas.</li>
+        <li>▼ <strong>Capital parado</strong>: -20–40% com relatórios de itens lentos/parados.</li>
+      </ul>
+      <p class="small">Valores indicativos com base em boas práticas. Resultados variam por operação e aderência aos processos.</p>
     </section>
 
     <section class="section">
-      <h2>Alguns dos nossos cases</h2>
-      <p class="muted">Projetos simples, com entrega rápida e foco no resultado.</p>
-      <div class="grid-cases">
-        <article class="case">
-          <div class="cap">Landing para clínica</div>
-          <div class="meta">Leads por WhatsApp e formulário · 7 dias</div>
-        </article>
-        <article class="case">
-          <div class="cap">Loja virtual enxuta</div>
-          <div class="meta">Catálogo + Checkout externo · 10 dias</div>
-        </article>
-        <article class="case">
-          <div class="cap">Automação de estoque</div>
-          <div class="meta">Alertas e relatórios ABC · 14 dias</div>
-        </article>
-        <article class="case">
-          <div class="cap">Dashboard financeiro</div>
-          <div class="meta">Integração planilhas · 5 dias</div>
-        </article>
+      <h2>Como funciona</h2>
+      <div class="steps">
+        <div class="step"><strong>1. Diagnóstico</strong><br><span class="small">Fluxo atual, catálogo e endereçamento.</span></div>
+        <div class="step"><strong>2. Implantação</strong><br><span class="small">Cadastro inicial, perfis de acesso e plano de endereços.</span></div>
+        <div class="step"><strong>3. Treinamento</strong><br><span class="small">Equipe orientada para recebimento, armazenagem e inventário.</span></div>
+        <div class="step"><strong>4. Suporte</strong><br><span class="small">Acompanhamento próximo e ajustes finos.</span></div>
       </div>
     </section>
 
-    <footer>
-      © <span id="y"></span> Felipe — borderless dev • <a id="cta-whats-footer" href="#" target="_blank" rel="noopener">WhatsApp</a>
-    </footer>
-  </div>
+    <section id="planos" class="section alt">
+      <h2>Planos e preços</h2>
+      <div class="pricing">
+        <div class="plan">
+          <h3>Início</h3>
+          <p class="price">R$ 99/mês</p>
+          <ul class="small">
+            <li>1 usuário</li>
+            <li>Recebimento e Armazenagem</li>
+            <li>Relatórios básicos</li>
+            <li>Suporte por WhatsApp</li>
+          </ul>
+          <a class="btn" id="cta-inicio">Começar</a>
+        </div>
+        <div class="plan featured">
+          <h3>Essencial</h3>
+          <p class="price">R$ 149/mês</p>
+          <ul class="small">
+            <li>3 usuários</li>
+            <li>Inventário e Ajustes</li>
+            <li>Alertas de mínimos</li>
+            <li>Onboarding remoto</li>
+          </ul>
+          <a class="btn accent" id="cta-essencial">Começar</a>
+        </div>
+        <div class="plan">
+          <h3>Pro</h3>
+          <p class="price">R$ 249/mês</p>
+          <ul class="small">
+            <li>5 usuários</li>
+            <li>Relatórios avançados (ABC/Giro)</li>
+            <li>Prioridade de suporte</li>
+            <li>Roadmap compartilhado</li>
+          </ul>
+          <a class="btn" id="cta-pro">Começar</a>
+        </div>
+      </div>
+      <p class="small">Preços promocionais de lançamento. Personalizações sob orçamento.</p>
+    </section>
+
+    <section id="contato" class="section">
+      <h2>Solicite uma demonstração</h2>
+      <p class="small">Preencha o formulário e retornamos em até 1 dia útil.</p>
+      <form id="lead" action="https://formsubmit.co/SEU_EMAIL_AQUI" method="POST">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Lead - Demonstração MELI WMS">
+        <input type="hidden" name="_next" value="obrigado.html">
+        <div class="row">
+          <label for="nome">Nome</label>
+          <input id="nome" name="Nome" required>
+        </div>
+        <div class="row">
+          <label for="tel">WhatsApp</label>
+          <input id="tel" name="WhatsApp" placeholder="(DD) 9xxxx-xxxx" required>
+        </div>
+        <div class="row">
+          <label for="negocio">Empresa / Setor</label>
+          <input id="negocio" name="Empresa" placeholder="Ex.: Mercado, Farmácia, Distribuidora" required>
+        </div>
+        <div class="row">
+          <label for="mensagem">Necessidade principal</label>
+          <textarea id="mensagem" name="Mensagem" rows="3" placeholder="Descreva brevemente o cenário atual e o que precisa"></textarea>
+        </div>
+        <button type="submit" class="btn accent">Enviar</button>
+        <a id="cta-whats-form" class="btn ghost" target="_blank" rel="noopener" style="margin-left:8px">Falar no WhatsApp</a>
+      </form>
+      <p class="small" style="margin-top:10px">Ao enviar, você concorda com nossa <a href="politica-privacidade.html">Política de Privacidade</a>.</p>
+    </section>
+
+    <section class="section faq">
+      <h2>Perguntas frequentes</h2>
+      <details>
+        <summary>Quanto tempo leva para implantar?</summary>
+        <div class="small">Em operações simples, de 3 a 7 dias úteis. Em operações com alto número de SKUs e endereçamento complexo, fazemos um plano em fases.</div>
+      </details>
+      <details>
+        <summary>Funciona sem coletores de dados?</summary>
+        <div class="small">Sim. Comece com desktop e celular. Integração com leitores/coletores é opcional.</div>
+      </details>
+      <details>
+        <summary>É possível exportar dados?</summary>
+        <div class="small">Sim. Relatórios em CSV/XLS e APIs em desenvolvimento conforme o plano.</div>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> MELI Sistemas • WMS • <a id="cta-whats-footer" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </footer>
 
   <script>
-    // ==== CONFIGURE AQUI =====
-    // 1) Ajuste seu WhatsApp no formato: 55 + DDD + número (ex.: 5598999999999)
-    const WHATS = "5548999320594"; // <-- SUBSTITUA
-    // 2) Mensagem que abrirá no WhatsApp
-    const MSG = encodeURIComponent("Olá! Vi sua landing e quero um orçamento.");
-    // =========================
+    const WHATS = "5599999999999"; // 55 + DDD + número
+    const MSG = encodeURIComponent("Olá! Quero uma demonstração do MELI WMS.");
     const WURL = `https://wa.me/${WHATS}?text=${MSG}`;
-
-    // Liga CTAs de WhatsApp
-    const el1 = document.getElementById('cta-whats-top');
-    const el2 = document.getElementById('cta-whats-form');
-    const el3 = document.getElementById('cta-whats-footer');
-    [el1,el2,el3].forEach(el=>{ if(el) el.href = WURL; });
-
-    // Ano no rodapé
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Validação extra simples
-    const form = document.getElementById('lead');
-    form.addEventListener('submit',(e)=>{
-      const nome = document.getElementById('nome').value.trim();
-      const tel  = document.getElementById('tel').value.trim();
-      if (nome.length < 2 || tel.length < 8){
-        e.preventDefault();
-        alert('Preencha nome e telefone corretamente.');
+    ["cta-whats-hero","cta-whats-form","cta-whats-footer","cta-inicio","cta-essencial","cta-pro"].forEach(id=>{
+      const el = document.getElementById(id);
+      if (el) {
+        if(id.startsWith("cta-")) el.addEventListener("click", ()=>{ window.open(WURL, "_blank", "noopener"); });
+        else el.href = WURL;
       }
     });
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
