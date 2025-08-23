@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Obrigado pelo contato</title>
+  <style>
+    body{font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#0b0c10;color:#e9eef5;margin:0;padding:0;display:grid;place-items:center;height:100vh}
+    .card{background:#12151f;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:28px;max-width:520px;text-align:center}
+    a.button{display:inline-block;margin-top:14px;padding:12px 16px;border-radius:12px;background:#ff3d6e;color:#fff;text-decoration:none}
+    a.link{display:inline-block;margin-top:10px;color:#a8b3c7}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Obrigado! 🎉</h1>
+    <p>Recebemos seu formulário. Em breve entraremos em contato.</p>
+    <a class="button" id="wa" href="#">Falar no WhatsApp agora</a><br>
+    <a class="link" href="./">Voltar para o site</a>
+  </div>
+  <script>
+    // Mesmo número do index.html
+    const WHATS = "5548999320594"; // <-- SUBSTITUA
+    const MSG = encodeURIComponent("Olá! Enviei o formulário e gostaria de falar agora.");
+    const WURL = `https://wa.me/${WHATS}?text=${MSG}`;
+    document.getElementById('wa').href = WURL;
+  </script>
+</body>
+</html>
