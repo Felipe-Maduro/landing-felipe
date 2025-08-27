@@ -91,7 +91,60 @@
       }
       h1{font-size:2rem}
     }  
-</style>
+    /* ===== Ganhos (cards organizados) ===== */
+    .benefits-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+    .benefit-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px;
+      box-shadow:0 8px 16px rgba(14,58,91,.12);
+    }
+    .benefit-card header{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:6px;
+    }
+    .benefit-card h3{ margin:0; font-size:1.05rem; color:#0b1f33 }
+    .benefit-card p{ margin:0; color:#0b1f33 }
+    .chip{
+      display:inline-grid; place-items:center;
+      width:28px; height:28px; border-radius:999px;
+      font-weight:700; font-size:.95rem;
+    }
+    .chip.up{
+      background:rgba(31,150,73,.12);
+      color:#1f9649; border:1px solid rgba(31,150,73,.25);
+    }
+    .chip.down{
+      background:rgba(220,38,38,.10);
+      color:#b91c1c; border:1px solid rgba(220,38,38,.25);
+    }
+    @media (max-width:900px){
+      .benefits-2{ grid-template-columns:1fr; }
+    }
+
+    /* ===== Botão flutuante do WhatsApp ===== */
+    .wa-float{
+      position:fixed; right:18px; bottom:18px;
+      width:58px; height:58px; border-radius:50%;
+      background:#25D366; color:#fff; z-index:1000;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+      border:none; text-decoration:none;
+    }
+    .wa-float:hover{ filter:brightness(.95); transform:translateY(-1px); }
+    .wa-float svg{ width:28px; height:28px; fill:currentColor; }
+    @media (prefers-reduced-motion:no-preference){
+      .wa-float{ transition:box-shadow .2s, transform .2s, filter .2s; }
+    }
+
+  </style>
 </head>
 <body>
   <header>
@@ -162,15 +215,35 @@
       </div>
     </section>
 
+    <!-- GANHOS atualizado com cards -->
     <section id="ganhos" class="section alt">
       <h2>Ganhos práticos para seu negócio</h2>
-      <ul class="benefits">
-        <li>▼ <strong>Rupturas</strong>: redução típica de 10–30% com alertas de mínimos e disciplina de estoque.</li>
-        <li>▲ <strong>Giro de estoque</strong>: +15–25% com visibilidade de saldos e inventário recorrente.</li>
-        <li>▼ <strong>Tempo de inventário</strong>: -40–60% com contagem guiada e recontagens automáticas.</li>
-        <li>▼ <strong>Capital parado</strong>: -20–40% com relatórios de itens lentos/parados.</li>
-      </ul>
-      <p class="small">Valores indicativos com base em boas práticas. Resultados variam por operação e aderência aos processos.</p>
+
+      <div class="benefits-2">
+        <article class="benefit-card">
+          <header><span class="chip down">▼</span><h3>Rupturas</h3></header>
+          <p><strong>−10–30%</strong> com alertas de mínimos e disciplina de estoque.</p>
+        </article>
+
+        <article class="benefit-card">
+          <header><span class="chip up">▲</span><h3>Giro de estoque</h3></header>
+          <p><strong>+15–25%</strong> com visibilidade de saldos e inventário recorrente.</p>
+        </article>
+
+        <article class="benefit-card">
+          <header><span class="chip down">▼</span><h3>Tempo de inventário</h3></header>
+          <p><strong>−40–60%</strong> com contagem guiada e recontagens automáticas.</p>
+        </article>
+
+        <article class="benefit-card">
+          <header><span class="chip down">▼</span><h3>Capital parado</h3></header>
+          <p><strong>−20–40%</strong> com relatórios de itens lentos/parados.</p>
+        </article>
+      </div>
+
+      <p class="small" style="margin-top:10px">
+        Valores indicativos com base em boas práticas. Resultados variam por operação e aderência aos processos.
+      </p>
     </section>
 
     <section id="telas" class="section">
@@ -211,33 +284,24 @@
       </form>
       <p class="small" style="margin-top:10px">Ao enviar, você concorda com nossa <a href="politica-privacidade.html">Política de Privacidade</a>.</p>
     </section>
-
-    <section class="section faq">
-      <h2>Perguntas frequentes</h2>
-      <details>
-        <summary>Quanto tempo leva para implantar?</summary>
-        <div class="small">Em operações simples, de 3 a 7 dias úteis. Em operações com alto número de SKUs e endereçamento complexo, fazemos um plano em fases.</div>
-      </details>
-      <details>
-        <summary>Funciona sem coletores de dados?</summary>
-        <div class="small">Sim. Comece com desktop e celular. Integração com leitores/coletores é opcional.</div>
-      </details>
-      <details>
-        <summary>É possível exportar dados?</summary>
-        <div class="small">Sim. Relatórios em CSV/XLS e APIs em desenvolvimento conforme o plano.</div>
-      </details>
-    </section>
   </main>
 
   <footer>
     © <span id="y"></span> MELI Sistemas • Gestão de Estoque • <a id="cta-whats-footer" href="#" target="_blank" rel="noopener">WhatsApp</a>
   </footer>
 
+  <!-- Botão flutuante do WhatsApp -->
+  <a id="wa-floating" class="wa-float" aria-label="Falar no WhatsApp" target="_blank" rel="noopener" href="#">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 3h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 5v-5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+    </svg>
+  </a>
+
   <script>
     const WHATS = "5548999320594";
     const MSG = encodeURIComponent("Olá! Quero uma demonstração do MELI (Gestão de Estoque).");
     const WURL = `https://wa.me/${WHATS}?text=${MSG}`;
-    ["cta-whats-hero","cta-whats-form","cta-whats-footer"].forEach(id=>{
+    ["cta-whats-hero","cta-whats-form","cta-whats-footer","wa-floating"].forEach(id=>{
       const el = document.getElementById(id);
       if (el) el.href = WURL;
     });
