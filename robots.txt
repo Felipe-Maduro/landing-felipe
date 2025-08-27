@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://melisistemas.com.br/sitemap.xml
