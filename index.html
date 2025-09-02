@@ -75,20 +75,21 @@
   a:hover{text-decoration:underline}
 
   /* ===== HEADER fixo (sem height rígida) ===== */
-  header{
-    position: fixed; top:0; left:0; right:0;
+  .site-header{
+    position: fixed;
+    top:0; left:0; right:0;
     z-index: 10000;
     background:#fff;
     border-bottom:1px solid var(--line);
     box-shadow:0 6px 14px rgba(14,58,91,.06);
     min-height: var(--header-h);
   }
-  .nav{
+  /* navegação dentro do header do site */
+  .site-header .nav{
     min-height: var(--header-h);
     display:flex; align-items:center; justify-content:space-between;
     padding:12px 20px; max-width:1180px; margin:0 auto;
   }
-  body{ padding-top: calc(var(--header-h) + 2px); }
 
   /* Âncoras (#modulos, #ganhos, #telas, #contato) */
   section[id]{ scroll-margin-top: calc(var(--header-h) + 8px); }
@@ -208,7 +209,7 @@
   </style>
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="nav wrap">
       <a class="brand" href="#top" aria-label="Página inicial">
         <img src="img/logo.png" alt="MELI Sistemas - logo" width="36" height="36">
