@@ -67,7 +67,7 @@
       --line:rgba(14,58,91,.22);
       --radius:14px;
       --shadow:0 14px 28px rgba(14,58,91,.18);
-      --header-h: 64px;
+      --header-h: 72px; /* DESKTOP (ajuste se precisar) */
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
@@ -75,7 +75,7 @@
     img{max-width:100%;display:block}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
-    header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 6px 14px rgba(14,58,91,.06)}
+    header{position: fixed;top:0; left:0; right:0;height: var(--header-h);z-index: 10000;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 6px 14px rgba(14,58,91,.06);}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1180px;margin:0 auto}
     .brand{display:flex;align-items:center;gap:10px}
     .brand span{font-weight:800;letter-spacing:.3px;color:var(--ink)}
@@ -110,8 +110,8 @@
     .gallery img{border-radius:12px;border:1px solid var(--line);background:#fff;box-shadow:0 6px 20px rgba(14,58,91,.10)}
     .section{padding:60px 0}
     .section.alt{background:var(--bg-strong);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    section[id]{ scroll-margin-top: var(--header-h); }
-    html{ scroll-padding-top: var(--header-h); }
+    html{ scroll-padding-top: calc(var(--header-h) + 8px); }
+    section[id]{ scroll-margin-top: calc(var(--header-h) + 8px); }
     h2{margin:0 0 14px;color:#0b1f33}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .feature{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
@@ -138,12 +138,15 @@
       .grid-3,.steps{grid-template-columns:1fr}
       .benefits{grid-template-columns:1fr}
       .gallery{grid-template-columns:1fr}
+
       :root{
         --bg:#e2eaf5;
         --line:rgba(14,58,91,.28);
+        --header-h: 60px; /* MOBILE override */
       }
+
       h1{font-size:2rem}
-    }  
+    } 
     /* ===== Ganhos (cards organizados) ===== */
     .benefits-2{
       display:grid;
