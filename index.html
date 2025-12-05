@@ -99,11 +99,20 @@
     font-weight: 800;
     font-size: 1.5rem;
     color: var(--ink);
+    padding: 8px;
+    border-radius: 8px;
+    transition: var(--transition);
+  }
+  
+  .brand:hover {
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .brand img {
-    height: 60px;
+    height: 50px;
     width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
   }
 
   .brand-text {
@@ -115,16 +124,13 @@
   .brand-text .main {
     font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--brand), var(--accent-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #10b981;
   }
 
   .brand-text .sub {
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--muted);
+    color: #e0e7ef;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -754,7 +760,7 @@
   <header class="site-header" id="header">
     <div class="nav wrap">
       <a class="brand" href="#top" aria-label="Página inicial">
-        <img src="img/logo-wms.png" alt="Meli WMS" style="height: 60px; width: auto;">
+        <img src="img/logo-wms.png" alt="Meli WMS">
         <div class="brand-text">
           <span class="main">Meli WMS</span>
           <span class="sub">Warehouse Management System</span>
