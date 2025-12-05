@@ -28,21 +28,21 @@
 
   <style>
   :root{
-    --bg: linear-gradient(135deg, #0a1929 0%, #132f4c 50%, #1a4d6e 100%);
-    --bg-strong: #0f1e2e;
-    --panel: #ffffff;
-    --ink: #0f172a;
-    --muted: #475569;
-    --brand: #0E3A5B;
-    --brand-light: #1e5a8e;
+    --bg: #0E3A5B;
+    --bg-strong: #0a2540;
+    --panel: #1a4d6e;
+    --ink: #ffffff;
+    --muted: #e0e7ef;
+    --brand: #10b981;
+    --brand-light: #34d399;
     --accent: #FF8A00;
     --accent-secondary: #10b981;
     --accent-light: #fbbf24;
     --success: #10b981;
-    --line: rgba(14,58,91,.15);
+    --line: rgba(255,255,255,.15);
     --radius: 16px;
-    --shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
-    --shadow-lg: 0 25px 50px -12px rgba(0,0,0,.25);
+    --shadow: 0 20px 25px -5px rgba(0,0,0,.3), 0 10px 10px -5px rgba(0,0,0,.2);
+    --shadow-lg: 0 25px 50px -12px rgba(0,0,0,.5);
     --header-h: 80px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -52,9 +52,9 @@
   html, body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e3f2fd 0%, #e8f5e9 50%, #fff3e0 100%);
+    background: #0E3A5B;
     background-attachment: fixed;
-    color: var(--ink);
+    color: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -69,17 +69,17 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 10000;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(14, 58, 91, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
-    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
     min-height: var(--header-h);
     transition: var(--transition);
   }
 
   .site-header.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 4px 20px rgba(0,0,0,.1);
+    background: rgba(10, 37, 64, 0.98);
+    box-shadow: 0 4px 20px rgba(0,0,0,.4);
   }
 
   .nav {
@@ -136,14 +136,14 @@
   }
 
   .nav-links a {
-    color: var(--muted);
+    color: #ffffff;
     font-weight: 500;
     transition: var(--transition);
     position: relative;
   }
 
   .nav-links a:hover {
-    color: var(--brand);
+    color: var(--accent);
   }
 
   .nav-links a::after {
@@ -211,7 +211,6 @@
   }
 
   .section.alt {
-    background: var(--bg-strong);
     position: relative;
   }
 
@@ -252,10 +251,7 @@
     font-size: 3.2rem;
     line-height: 1.2;
     margin: 0 0 24px;
-    background: linear-gradient(135deg, var(--ink), var(--brand));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
@@ -271,7 +267,7 @@
 
   .hero-content p {
     font-size: 1.25rem;
-    color: var(--muted);
+    color: #e0e7ef;
     margin-bottom: 32px;
     max-width: 90%;
   }
@@ -286,7 +282,7 @@
   .hero-features {
     display: flex;
     gap: 32px;
-    color: var(--muted);
+    color: #ffffff;
     font-size: 0.95rem;
   }
 
@@ -304,10 +300,10 @@
 
   /* ===== MOCKUP SECTIONS ===== */
   .mockup-container {
-    background: var(--panel);
+    background: #ffffff;
     border-radius: var(--radius);
     padding: 32px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-lg);
     position: relative;
     overflow: hidden;
   }
@@ -353,13 +349,13 @@
   }
 
   .mockup-content h4 {
-    color: var(--brand);
+    color: #0E3A5B;
     font-size: 1.1rem;
     margin: 0 0 12px;
   }
 
   .mockup-content p {
-    color: var(--muted);
+    color: #475569;
     margin: 0;
     font-size: 0.95rem;
   }
@@ -372,18 +368,19 @@
   }
 
   .benefit-card {
-    background: var(--panel);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: var(--radius);
     padding: 32px 24px;
     box-shadow: var(--shadow);
     text-align: center;
     transition: var(--transition);
-    border: 1px solid var(--line);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .benefit-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .benefit-icon {
@@ -412,20 +409,20 @@
 
   .benefit-card h3 {
     margin: 0 0 8px;
-    color: var(--ink);
+    color: #ffffff;
     font-size: 1.1rem;
   }
 
   .benefit-card .metric {
     font-size: 1.3rem;
     font-weight: bold;
-    color: var(--brand);
+    color: var(--accent);
     margin-bottom: 8px;
   }
 
   .benefit-card p {
     margin: 0;
-    color: var(--muted);
+    color: #e0e7ef;
     font-size: 0.95rem;
   }
 
@@ -437,34 +434,35 @@
   }
 
   .feature-card {
-    background: var(--panel);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: var(--radius);
     padding: 32px;
     box-shadow: var(--shadow);
-    border: 1px solid var(--line);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
   }
 
   .feature-card:hover {
-    border-color: var(--brand);
+    border-color: var(--accent);
     box-shadow: var(--shadow-lg);
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .feature-card h3 {
     margin: 0 0 12px;
-    color: var(--brand);
+    color: var(--accent);
     font-size: 1.3rem;
   }
 
   .feature-card p {
     margin: 0;
-    color: var(--muted);
+    color: #e0e7ef;
   }
 
   .feature-card ul {
     margin: 16px 0 0 0;
     padding-left: 20px;
-    color: var(--muted);
+    color: #e0e7ef;
   }
 
   .feature-card ul li {
@@ -479,11 +477,11 @@
   }
 
   .module-card {
-    background: var(--panel);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: var(--radius);
     padding: 28px;
     box-shadow: var(--shadow);
-    border: 1px solid var(--line);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
@@ -496,18 +494,19 @@
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, var(--brand), var(--accent-secondary));
+    background: linear-gradient(180deg, var(--accent), var(--accent-secondary));
   }
 
   .module-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--brand);
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .module-card h3 {
     margin: 0 0 12px;
-    color: var(--brand);
+    color: var(--accent);
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -522,7 +521,7 @@
 
   .module-card p {
     margin: 0 0 12px;
-    color: var(--muted);
+    color: #e0e7ef;
     font-size: 0.95rem;
   }
 
@@ -534,7 +533,7 @@
 
   .module-card ul li {
     padding: 6px 0;
-    color: var(--muted);
+    color: #e0e7ef;
     font-size: 0.9rem;
     display: flex;
     align-items: center;
@@ -552,10 +551,11 @@
   .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background: var(--panel);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: var(--radius);
     padding: 40px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .form-group {
@@ -566,7 +566,7 @@
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: var(--ink);
+    color: #ffffff;
   }
 
   .form-group input,
@@ -574,29 +574,30 @@
   .form-group select {
     width: 100%;
     padding: 12px 16px;
-    border: 2px solid var(--line);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     font-size: 1rem;
     transition: var(--transition);
-    background: #fafafa;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
   }
 
   .form-group input:focus,
   .form-group textarea:focus,
   .form-group select:focus {
     outline: none;
-    border-color: var(--brand);
-    background: white;
-    box-shadow: 0 0 0 3px rgba(14,58,91,.1);
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 138, 0, 0.1);
   }
 
   /* ===== FOOTER ===== */
   footer {
-    background: var(--ink);
+    background: #0a2540;
     color: #94a3b8;
     padding: 40px 0;
     text-align: center;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   footer a {
@@ -738,15 +739,12 @@
   .section-header h2 {
     font-size: 2.5rem;
     margin: 0 0 16px;
-    background: linear-gradient(135deg, var(--ink), var(--brand));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
   }
 
   .section-header p {
     font-size: 1.1rem;
-    color: var(--muted);
+    color: #e0e7ef;
     max-width: 600px;
     margin: 0 auto;
   }
@@ -756,7 +754,7 @@
   <header class="site-header" id="header">
     <div class="nav wrap">
       <a class="brand" href="#top" aria-label="Página inicial">
-        <img src="img/logo-wms.png" alt="Meli WMS">
+        <img src="img/logo-wms.png" alt="Meli WMS" style="height: 60px; width: auto;">
         <div class="brand-text">
           <span class="main">Meli WMS</span>
           <span class="sub">Warehouse Management System</span>
