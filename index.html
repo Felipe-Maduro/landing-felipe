@@ -2,40 +2,41 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
-  <title>MELI Sistemas • Soluções de Gestão Inteligente</title>
+  <title>Meli Sistemas • Sistema de Gestão de Estoque Inteligente</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sistemas de gestão inteligente para WMS, Agropecuária e Pet Shops. Soluções completas com PDV, estoque, relatórios e muito mais.">
+  <meta name="description" content="Sistema WMS completo para gestão de estoque. Rastreabilidade total, controle de endereçamento, inventário automatizado e relatórios em tempo real.">
   <link rel="canonical" href="https://melisistemas.com.br/">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0E3A5B">
 
   <!-- Ícones -->
-  <link rel="icon" type="image/png" href="img/logo principal.png">
-  <link rel="apple-touch-icon" href="img/logo principal.png">
+  <link rel="icon" type="image/png" href="img/logo-wms-32.png">
+  <link rel="apple-touch-icon" href="img/logo-wms-180.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="MELI Sistemas • Soluções de Gestão Inteligente">
-  <meta property="og:description" content="Sistemas completos para WMS, Agropecuária e Pet Shops com tecnologia de ponta.">
+  <meta property="og:title" content="Meli Sistemas • Sistema de Gestão de Estoque Inteligente">
+  <meta property="og:description" content="WMS completo com rastreabilidade total, controle de endereçamento e inventário automatizado.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://melisistemas.com.br/">
-  <meta property="og:site_name" content="MELI Sistemas">
+  <meta property="og:site_name" content="Meli Sistemas">
   <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MELI Sistemas • Soluções de Gestão Inteligente">
-  <meta name="twitter:description" content="Sistemas completos para WMS, Agropecuária e Pet Shops com tecnologia de ponta.">
+  <meta name="twitter:title" content="Meli Sistemas • Sistema de Gestão de Estoque Inteligente">
+  <meta name="twitter:description" content="WMS completo com rastreabilidade total, controle de endereçamento e inventário automatizado.">
 
   <style>
   :root{
-    --bg: linear-gradient(135deg, #e3f2fd 0%, #e8f5e9 50%, #fff3e0 100%);
-    --bg-strong: #f1f5f9;
+    --bg: linear-gradient(135deg, #0a1929 0%, #132f4c 50%, #1a4d6e 100%);
+    --bg-strong: #0f1e2e;
     --panel: #ffffff;
     --ink: #0f172a;
     --muted: #475569;
     --brand: #0E3A5B;
-    --brand-light: #1e40af;
+    --brand-light: #1e5a8e;
     --accent: #FF8A00;
+    --accent-secondary: #10b981;
     --accent-light: #fbbf24;
     --success: #10b981;
     --line: rgba(14,58,91,.15);
@@ -94,16 +95,38 @@
   .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     font-weight: 800;
     font-size: 1.5rem;
     color: var(--ink);
   }
 
   .brand img {
-    height: 110px;
+    height: 60px;
     width: auto;
-    margin: -15px 0;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .brand-text .main {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--brand), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .brand-text .sub {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .nav-links {
@@ -279,69 +302,6 @@
     font-weight: bold;
   }
 
-  /* ===== PRODUCTS SHOWCASE ===== */
-  .products-showcase {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 24px;
-  }
-
-  .product-card {
-    background: var(--panel);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    transition: var(--transition);
-    position: relative;
-  }
-
-  .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .product-header {
-    padding: 32px 32px 24px;
-    background: linear-gradient(135deg, var(--panel), #f8fafc);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .product-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0 0 8px;
-    color: var(--ink);
-  }
-
-  .product-subtitle {
-    color: var(--muted);
-    margin: 0;
-  }
-
-  .product-content {
-    padding: 24px 32px 32px;
-  }
-
-  .product-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 24px;
-  }
-
-  .product-features li {
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--muted);
-  }
-
-  .product-features li::before {
-    content: '→';
-    color: var(--brand);
-    font-weight: bold;
-  }
-
   /* ===== MOCKUP SECTIONS ===== */
   .mockup-container {
     background: var(--panel);
@@ -359,7 +319,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--brand), var(--accent));
+    background: linear-gradient(90deg, var(--brand), var(--accent-secondary));
   }
 
   .mockup-screen {
@@ -383,7 +343,7 @@
     left: 16px;
     right: 16px;
     height: 3px;
-    background: linear-gradient(90deg, #ef4444, #f59e0b, #10b981);
+    background: linear-gradient(90deg, #0E3A5B, #10b981, #FF8A00);
     border-radius: 2px;
   }
 
@@ -501,6 +461,93 @@
     color: var(--muted);
   }
 
+  .feature-card ul {
+    margin: 16px 0 0 0;
+    padding-left: 20px;
+    color: var(--muted);
+  }
+
+  .feature-card ul li {
+    margin: 8px 0;
+  }
+
+  /* ===== MODULES SECTION ===== */
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .module-card {
+    background: var(--panel);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .module-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--brand), var(--accent-secondary));
+  }
+
+  .module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--brand);
+  }
+
+  .module-card h3 {
+    margin: 0 0 12px;
+    color: var(--brand);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .module-card h3::before {
+    content: '▸';
+    color: var(--accent-secondary);
+    font-weight: bold;
+  }
+
+  .module-card p {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .module-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .module-card ul li {
+    padding: 6px 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .module-card ul li::before {
+    content: '✓';
+    color: var(--success);
+    font-weight: bold;
+    font-size: 0.85rem;
+  }
+
   /* ===== CONTACT FORM ===== */
   .contact-form {
     max-width: 600px;
@@ -609,7 +656,15 @@
     }
 
     .brand img {
-      height: 50px !important;
+      height: 50px;
+    }
+
+    .brand-text .main {
+      font-size: 1.2rem;
+    }
+
+    .brand-text .sub {
+      font-size: 0.65rem;
     }
 
     .hero {
@@ -636,15 +691,15 @@
       flex-wrap: wrap;
     }
 
-    .products-showcase {
-      grid-template-columns: 1fr;
-    }
-
     .benefits-grid {
       grid-template-columns: 1fr;
     }
 
     .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .modules-grid {
       grid-template-columns: 1fr;
     }
 
@@ -701,13 +756,17 @@
   <header class="site-header" id="header">
     <div class="nav wrap">
       <a class="brand" href="#top" aria-label="Página inicial">
-        <img src="img/logo principal.png" alt="MELI Sistemas">
+        <img src="img/logo-wms.png" alt="Meli WMS">
+        <div class="brand-text">
+          <span class="main">Meli WMS</span>
+          <span class="sub">Warehouse Management System</span>
+        </div>
       </a>
       <nav class="nav-links">
-        <a href="#solucoes">Soluções</a>
+        <a href="#modulos">Módulos</a>
         <a href="#recursos">Recursos</a>
         <a href="#beneficios">Benefícios</a>
-        <a href="#contato" class="btn btn-primary">Demonstração</a>
+        <a href="#contato" class="btn btn-primary">Solicitar Demo</a>
       </nav>
     </div>
   </header>
@@ -716,21 +775,21 @@
     <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-content">
-        <div class="kicker">Gestão Inteligente e Acessível</div>
-        <h1>Sistemas <span style="color: var(--accent);">MELI</span> para seu negócio</h1>
-        <p>Soluções completas de gestão para WMS, Agropecuária e Pet Shops. Tecnologia moderna, implementação rápida e suporte dedicado.</p>
+        <div class="kicker">Sistema WMS Profissional</div>
+        <h1>Controle Total do seu <span style="color: var(--accent-secondary);">Estoque</span></h1>
+        <p>Sistema completo de gerenciamento de armazém com rastreabilidade total, controle de endereçamento, inventário automatizado e relatórios em tempo real.</p>
         
         <div class="hero-actions">
           <a id="cta-whats-hero" class="btn btn-primary" target="_blank" rel="noopener">
             Falar no WhatsApp
           </a>
-          <a href="#contato" class="btn btn-ghost">Ver Demonstração</a>
+          <a href="#contato" class="btn btn-ghost">Demonstração Gratuita</a>
         </div>
 
         <div class="hero-features">
-          <span>Sem fidelidade</span>
+          <span>Rastreabilidade 100%</span>
+          <span>Usuários ilimitados</span>
           <span>Implementação rápida</span>
-          <span>Suporte dedicado</span>
         </div>
       </div>
 
@@ -738,60 +797,126 @@
         <div class="mockup-screen">
           <div class="mockup-content">
             <h4>Interface Moderna e Intuitiva</h4>
-            <p>Sistemas desenvolvidos com foco na experiência do usuário, garantindo facilidade de uso e produtividade máxima.</p>
+            <p>Sistema desenvolvido com foco na experiência do usuário, garantindo máxima produtividade e controle total das operações de armazém.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SOLUTIONS SECTION -->
-    <section id="solucoes" class="section">
+    <!-- MODULES SECTION -->
+    <section id="modulos" class="section">
       <div class="section-header">
-        <h2>Nossas Soluções</h2>
-        <p>Sistemas especializados para diferentes segmentos, todos com a qualidade e confiabilidade MELI.</p>
+        <h2>Módulos do Sistema</h2>
+        <p>Funcionalidades completas para gerenciar todas as operações do seu armazém.</p>
       </div>
 
-      <div class="products-showcase">
-        <article class="product-card">
-          <div class="product-header">
-            <img src="img/logo wms.png" alt="MELI WMS" style="width: 90px; height: 90px; object-fit: contain; margin-bottom: 16px;">
-            <h3 class="product-title">MELI WMS</h3>
-            <p class="product-subtitle">Gestão de Estoque Inteligente</p>
-          </div>
-          <div class="product-content">
-            <ul class="product-features">
-              <li>Recebimento e conferência automatizada</li>
-              <li>Controle de saldos em tempo real</li>
-              <li>Estrutura de endereçamento completa</li>
-              <li>Inventário cíclico e geral</li>
-              <li>Relatórios de giro e performance</li>
-              <li>Auditoria completa por usuário</li>
-            </ul>
-            <a href="#contato" class="btn btn-ghost" style="width: 100%; justify-content: center;">
-              Conhecer WMS
-            </a>
-          </div>
+      <div class="modules-grid">
+        <article class="module-card">
+          <h3>Recebimento</h3>
+          <p>Controle total do processo de entrada de mercadorias com conferência automatizada.</p>
+          <ul>
+            <li>Conferência por nota fiscal</li>
+            <li>Registro de divergências</li>
+            <li>Geração de etiquetas</li>
+            <li>Controle de fornecedores</li>
+            <li>Histórico completo</li>
+          </ul>
         </article>
 
-        <article class="product-card">
-          <div class="product-header">
-            <img src="img/logo agro-pet.png" alt="MELI AGRO" style="width: 90px; height: 90px; object-fit: contain; margin-bottom: 16px;">
-            <h3 class="product-title">MELI AGRO/PET</h3>
-            <p class="product-subtitle">Gestão para Agropecuária e Pet Shops</p>
-          </div>
-          <div class="product-content">
-            <ul class="product-features">
-              <li>PDV integrado com cupom fiscal</li>
-              <li>Controle completo de estoque</li>
-              <li>Cadastro detalhado de produtos</li>
-              <li>Sistema de inventário avançado</li>
-              <li>Relatórios gerenciais completos</li>
-              <li>Multi-usuário com permissões</li>
-            </ul>
-            <a href="#contato" class="btn btn-ghost" style="width: 100%; justify-content: center;">
-              Conhecer AGRO/PET
-            </a>
-          </div>
+        <article class="module-card">
+          <h3>Armazenagem</h3>
+          <p>Sistema inteligente de endereçamento e alocação de produtos.</p>
+          <ul>
+            <li>Estrutura multinível (Rua/Prédio/Nível/Apartamento)</li>
+            <li>Sugestão automática de endereços</li>
+            <li>Controle de ocupação</li>
+            <li>Movimentação rastreada</li>
+            <li>Mapa visual do armazém</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <h3>Controle de Estoque</h3>
+          <p>Visibilidade total dos saldos e movimentações em tempo real.</p>
+          <ul>
+            <li>Saldos por endereço</li>
+            <li>Consulta rápida de produtos</li>
+            <li>Relatórios de giro</li>
+            <li>Análise ABC</li>
+            <li>Alertas de mínimos</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <h3>Transferências</h3>
+          <p>Movimentação interna de produtos entre endereços.</p>
+          <ul>
+            <li>Transferência individual ou em lote</li>
+            <li>Reendereçamento inteligente</li>
+            <li>Rastreamento completo</li>
+            <li>Aprovação por níveis</li>
+            <li>Histórico detalhado</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <h3>Inventário</h3>
+          <p>Contagem física e ajustes de estoque automatizados.</p>
+          <ul>
+            <li>Inventário cíclico</li>
+            <li>Inventário geral</li>
+            <li>Contagem guiada</li>
+            <li>Análise de divergências</li>
+            <li>Relatórios de acuracidade</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <h3>Impressão de Etiquetas</h3>
+          <p>Geração e impressão de etiquetas para identificação de produtos.</p>
+          <ul>
+            <li>Suporte a impressoras térmicas</li>
+            <li>Modelos personalizáveis</li>
+            <li>Códigos de barras</li>
+            <li>QR Codes</li>
+            <li>Impressão em lote</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <h3>Gestão de Usuários</h3>
+          <p>Controle de acesso e permissões por perfil.</p>
+          <ul>
+            <li>Usuários ilimitados</li>
+            <li>Perfis de acesso</li>
+            <li>Auditoria de ações</li>
+            <li>Histórico por operador</li>
+            <li>Múltiplos níveis de permissão</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <h3>Relatórios e BI</h3>
+          <p>Análises avançadas e relatórios gerenciais.</p>
+          <ul>
+            <li>Dashboards em tempo real</li>
+            <li>KPIs operacionais</li>
+            <li>Relatórios customizados</li>
+            <li>Exportação para Excel/PDF</li>
+            <li>Gráficos interativos</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <h3>Integrações</h3>
+          <p>Conecte o WMS com seus sistemas existentes.</p>
+          <ul>
+            <li>API REST completa</li>
+            <li>Integração com ERP</li>
+            <li>Importação de XML</li>
+            <li>WebHooks</li>
+            <li>Sincronização automática</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -800,38 +925,74 @@
     <section id="recursos" class="section alt">
       <div class="section-header">
         <h2>Recursos Principais</h2>
-        <p>Funcionalidades desenvolvidas para atender às necessidades reais do seu negócio.</p>
+        <p>Tecnologia de ponta para maximizar a eficiência do seu armazém.</p>
       </div>
 
       <div class="features-grid">
         <article class="feature-card">
-          <h3>🔍 Rastreabilidade Total</h3>
-          <p>Controle completo de todas as movimentações com registro detalhado por usuário, data e hora. Auditoria e compliance garantidos.</p>
+          <h3>Rastreabilidade Total</h3>
+          <p>Controle completo de todas as movimentações com registro detalhado por usuário, data e hora.</p>
+          <ul>
+            <li>Histórico completo de cada produto</li>
+            <li>Auditoria de todas as operações</li>
+            <li>Identificação de responsáveis</li>
+            <li>Compliance garantido</li>
+          </ul>
         </article>
 
         <article class="feature-card">
-          <h3>📊 Relatórios Inteligentes</h3>
-          <p>Dashboards e relatórios em tempo real para tomada de decisões estratégicas. Análise de performance e indicadores de gestão.</p>
+          <h3>Acesso Multi-dispositivo</h3>
+          <p>Acesse o sistema de qualquer lugar, em qualquer dispositivo.</p>
+          <ul>
+            <li>Web responsivo</li>
+            <li>Aplicativo mobile Android/iOS</li>
+            <li>Sincronização em tempo real</li>
+            <li>Trabalhe offline quando necessário</li>
+          </ul>
         </article>
 
         <article class="feature-card">
-          <h3>💰 PDV Integrado</h3>
-          <p>Sistema de ponto de venda completo com emissão de cupom fiscal, controle de caixa e integração total com estoque.</p>
+          <h3>Estrutura Flexível</h3>
+          <p>Sistema de endereçamento adaptável à sua realidade.</p>
+          <ul>
+            <li>Múltiplos níveis de endereçamento</li>
+            <li>Suporte a diversos layouts</li>
+            <li>Configuração personalizada</li>
+            <li>Expansão sem limites</li>
+          </ul>
         </article>
 
         <article class="feature-card">
-          <h3>📱 Acesso Multi-dispositivo</h3>
-          <p>Acesse seus sistemas de qualquer lugar, em qualquer dispositivo. Interface responsiva e otimizada para todas as telas.</p>
+          <h3>Performance Otimizada</h3>
+          <p>Sistema rápido e estável, mesmo com grande volume de dados.</p>
+          <ul>
+            <li>Consultas instantâneas</li>
+            <li>Suporta milhões de registros</li>
+            <li>Operações em tempo real</li>
+            <li>Alta disponibilidade</li>
+          </ul>
         </article>
 
         <article class="feature-card">
-          <h3>🔒 Segurança Avançada</h3>
-          <p>Proteção de dados com criptografia, backup automático e controle de acesso por níveis de permissão.</p>
+          <h3>Segurança Avançada</h3>
+          <p>Proteção de dados com tecnologia de ponta.</p>
+          <ul>
+            <li>Criptografia de dados</li>
+            <li>Backup automático</li>
+            <li>Controle de acesso granular</li>
+            <li>Logs de auditoria</li>
+          </ul>
         </article>
 
         <article class="feature-card">
-          <h3>🚀 Implementação Rápida</h3>
-          <p>Setup em até 7 dias com treinamento incluído. Migração de dados e suporte completo durante a implantação.</p>
+          <h3>Interface Intuitiva</h3>
+          <p>Design moderno focado na experiência do usuário.</p>
+          <ul>
+            <li>Navegação simplificada</li>
+            <li>Treinamento rápido</li>
+            <li>Atalhos inteligentes</li>
+            <li>Personalização por usuário</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -845,17 +1006,10 @@
 
       <div class="benefits-grid">
         <article class="benefit-card">
-          <div class="benefit-icon down">↓</div>
-          <h3>Rupturas de Estoque</h3>
-          <div class="metric">-25%</div>
-          <p>Redução significativa com alertas automáticos e controle preciso de mínimos.</p>
-        </article>
-
-        <article class="benefit-card">
           <div class="benefit-icon up">↑</div>
-          <h3>Giro de Estoque</h3>
-          <div class="metric">+35%</div>
-          <p>Aumento na rotatividade com visibilidade total e análises preditivas.</p>
+          <h3>Acuracidade de Estoque</h3>
+          <div class="metric">+98%</div>
+          <p>Precisão garantida com rastreabilidade total e inventários automatizados.</p>
         </article>
 
         <article class="benefit-card">
@@ -868,22 +1022,29 @@
         <article class="benefit-card">
           <div class="benefit-icon up">↑</div>
           <h3>Produtividade</h3>
-          <div class="metric">+40%</div>
+          <div class="metric">+45%</div>
           <p>Equipes mais eficientes com processos otimizados e interfaces intuitivas.</p>
         </article>
 
         <article class="benefit-card">
           <div class="benefit-icon down">↓</div>
-          <h3>Custos Operacionais</h3>
-          <div class="metric">-30%</div>
-          <p>Redução de desperdícios, retrabalho e necessidade de mão de obra adicional.</p>
+          <h3>Erros Operacionais</h3>
+          <div class="metric">-75%</div>
+          <p>Redução drástica de erros com validações automáticas e processos guiados.</p>
         </article>
 
         <article class="benefit-card">
           <div class="benefit-icon up">↑</div>
-          <h3>Satisfação do Cliente</h3>
-          <div class="metric">+50%</div>
-          <p>Atendimento mais ágil com informações precisas e disponibilidade garantida.</p>
+          <h3>Giro de Estoque</h3>
+          <div class="metric">+35%</div>
+          <p>Aumento na rotatividade com visibilidade total e análises preditivas.</p>
+        </article>
+
+        <article class="benefit-card">
+          <div class="benefit-icon down">↓</div>
+          <h3>Custos Operacionais</h3>
+          <div class="metric">-40%</div>
+          <p>Redução de desperdícios, retrabalho e necessidade de mão de obra adicional.</p>
         </article>
       </div>
 
@@ -899,46 +1060,46 @@
     <section class="section alt">
       <div class="section-header">
         <h2>O que nossos clientes dizem</h2>
-        <p>Depoimentos reais de empresas que transformaram sua gestão com MELI.</p>
+        <p>Depoimentos reais de empresas que transformaram sua gestão de estoque.</p>
       </div>
 
       <div class="benefits-grid">
         <article class="benefit-card" style="text-align: left;">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">A</div>
-            <div>
-              <h4 style="margin: 0; color: var(--ink);">Agropecuária Silva</h4>
-              <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Distribuidora de Insumos</p>
-            </div>
-          </div>
-          <p style="font-style: italic; color: var(--muted);">
-            "O MELI AGRO transformou nossa operação. Reduzimos 40% do tempo gasto em inventário e temos controle total do estoque em tempo real."
-          </p>
-        </article>
-
-        <article class="benefit-card" style="text-align: left;">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">P</div>
-            <div>
-              <h4 style="margin: 0; color: var(--ink);">Pet Care Plus</h4>
-              <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Pet Shop e Veterinária</p>
-            </div>
-          </div>
-          <p style="font-style: italic; color: var(--muted);">
-            "Implementação foi super rápida e o suporte é excepcional."
-          </p>
-        </article>
-
-        <article class="benefit-card" style="text-align: left;">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">L</div>
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #0E3A5B, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">L</div>
             <div>
               <h4 style="margin: 0; color: var(--ink);">LogiMax Distribuidora</h4>
               <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Centro de Distribuição</p>
             </div>
           </div>
           <p style="font-style: italic; color: var(--muted);">
-            "O MELI WMS nos deu a rastreabilidade que precisávamos. Agora sabemos exatamente onde cada produto está e quem movimentou."
+            "O Meli WMS nos deu a rastreabilidade que precisávamos. Agora sabemos exatamente onde cada produto está e quem movimentou. A acuracidade do estoque passou de 85% para 99%."
+          </p>
+        </article>
+
+        <article class="benefit-card" style="text-align: left;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">D</div>
+            <div>
+              <h4 style="margin: 0; color: var(--ink);">DistribuCorp</h4>
+              <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Distribuidora Atacadista</p>
+            </div>
+          </div>
+          <p style="font-style: italic; color: var(--muted);">
+            "Reduzimos o tempo de inventário de 3 dias para apenas 8 horas. O sistema é muito intuitivo e a equipe se adaptou rapidamente. Implementação foi super rápida e o suporte é excepcional."
+          </p>
+        </article>
+
+        <article class="benefit-card" style="text-align: left;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">A</div>
+            <div>
+              <h4 style="margin: 0; color: var(--ink);">Armazém Central</h4>
+              <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Operador Logístico</p>
+            </div>
+          </div>
+          <p style="font-style: italic; color: var(--muted);">
+            "Conseguimos aumentar a produtividade em 40% após implementar o Meli WMS. O sistema de endereçamento é perfeito para nossa estrutura complexa. Vale cada centavo!"
           </p>
         </article>
       </div>
@@ -948,31 +1109,31 @@
     <section class="section">
       <div class="section-header">
         <h2>Como Funciona</h2>
-        <p>Processo simples e eficiente para você começar a usar nossos sistemas.</p>
+        <p>Processo simples e eficiente para você começar a usar o MELI WMS.</p>
       </div>
 
       <div class="benefits-grid">
         <article class="benefit-card">
           <div class="benefit-icon" style="background: rgba(59,130,246,.1); color: #3b82f6; border: 2px solid rgba(59,130,246,.2);">1</div>
           <h3>Análise Gratuita</h3>
-          <p>Conversamos sobre suas necessidades e demonstramos como o MELI pode ajudar seu negócio.</p>
+          <p>Conversamos sobre suas necessidades e demonstramos como o Meli WMS pode otimizar sua operação.</p>
         </article>
 
         <article class="benefit-card">
           <div class="benefit-icon" style="background: rgba(16,185,129,.1); color: #10b981; border: 2px solid rgba(16,185,129,.2);">2</div>
-          <h3>Configuração Rápida</h3>
-          <p>Setup personalizado em até 48 horas com migração de dados e configurações específicas.</p>
+          <h3>Configuração Personalizada</h3>
+          <p>Setup completo em até 7 dias com estrutura de endereçamento, usuários e importação de produtos.</p>
         </article>
 
         <article class="benefit-card">
           <div class="benefit-icon" style="background: rgba(245,158,11,.1); color: #f59e0b; border: 2px solid rgba(245,158,11,.2);">3</div>
-          <h3>Treinamento Incluído</h3>
-          <p>Capacitação completa da sua equipe com materiais de apoio e suporte contínuo.</p>
+          <h3>Treinamento Completo</h3>
+          <p>Capacitação presencial ou remota da sua equipe com materiais de apoio e certificação.</p>
         </article>
 
         <article class="benefit-card">
           <div class="benefit-icon" style="background: rgba(139,92,246,.1); color: #8b5cf6; border: 2px solid rgba(139,92,246,.2);">4</div>
-          <h3>Suporte Vitalício</h3>
+          <h3>Suporte Contínuo</h3>
           <p>Atendimento humanizado por WhatsApp, telefone e chat. Atualizações automáticas incluídas.</p>
         </article>
       </div>
@@ -981,70 +1142,75 @@
     <!-- PRICING SECTION -->
     <section class="section alt">
       <div class="section-header">
-        <h2>Planos e Preços</h2>
-        <p>Soluções acessíveis para empresas de todos os tamanhos.</p>
+        <h2>Investimento</h2>
+        <p>Solução personalizada para as necessidades do seu armazém.</p>
       </div>
 
-      <div class="products-showcase">
-        <article class="product-card">
-          <div class="product-header">
-            <img src="img/logo wms.png" alt="MELI WMS" style="width: 90px; height: 90px; object-fit: contain; margin-bottom: 16px;">
-            <h3 class="product-title">MELI WMS</h3>
-            <p class="product-subtitle">Gestão de Estoque Completa</p>
+      <div style="max-width: 600px; margin: 0 auto;">
+        <article class="benefit-card" style="padding: 48px; border: 3px solid var(--brand);">
+          <div style="text-align: center; margin-bottom: 32px;">
+            <img src="img/logo-wms.png" alt="Meli WMS" style="width: 120px; height: 120px; margin: 0 auto 24px; object-fit: contain;">
+            <h3 style="font-size: 2rem; margin: 0 0 12px; color: var(--brand);">Meli WMS</h3>
+            <p style="color: var(--muted); margin: 0;">Warehouse Management System</p>
           </div>
-          <div class="product-content">
-            <div style="text-align: center; margin-bottom: 24px;">
-              <div style="font-size: 2.5rem; font-weight: bold; color: var(--brand);">Sob consulta</div>
-              <p style="margin: 8px 0 0; color: var(--muted);">Personalizado para sua operação</p>
-            </div>
-            <ul class="product-features">
-              <li>Usuários ilimitados*</li>
-              <li>Recebimento de mercadoria</li>
-              <li>Estoque</li>
-              <li>Tranferência</li>
-              <li>Inventário</li>
-              <li>Consulta de Estoque</li>
-              <li>Relatórios avançados</li>
-              <li>Integração com ERP</li>
-              <li>Suporte técnico incluído</li>
-            </ul>
-            <a href="#contato" class="btn btn-primary" style="width: 100%; justify-content: center;">
-              Solicitar Orçamento
-            </a>
-          </div>
-        </article>
 
-        <article class="product-card" style="border: 3px solid var(--accent); position: relative;">
-          <div style="position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #1a1a1a; padding: 6px 20px; border-radius: 0 0 8px 8px; font-weight: bold; font-size: 0.85rem;">MAIS POPULAR</div>
-          <div class="product-header">
-            <img src="img/logo agro-pet.png" alt="MELI AGRO" style="width: 90px; height: 90px; object-fit: contain; margin-bottom: 16px;">
-            <h3 class="product-title">MELI AGRO/PET</h3>
-            <p class="product-subtitle">Agropecuária e Pet Shops</p>
+          <div style="text-align: center; margin-bottom: 32px; padding: 24px; background: rgba(14,58,91,.05); border-radius: 12px;">
+            <div style="font-size: 3rem; font-weight: bold; color: var(--brand); margin-bottom: 8px;">Sob Consulta</div>
+            <p style="margin: 0; color: var(--muted);">Personalizado para sua operação</p>
           </div>
-          <div class="product-content">
-            <div style="text-align: center; margin-bottom: 24px;">
-              <div style="font-size: 2.5rem; font-weight: bold; color: var(--brand);">R$ 119,90<span style="font-size: 1rem; color: var(--muted);">/mês</span></div>
-              <p style="margin: 8px 0 0; color: var(--muted);">Para 2 usuários incluídos</p>
-            </div>
-            <ul class="product-features">
-              <li>PDV com cupom fiscal</li>
-              <li>Controle de estoque completo</li>
-              <li>Relatórios gerenciais</li>
-              <li>Inventário automatizado</li>
-              <li>Suporte via WhatsApp</li>
+
+          <div style="margin-bottom: 32px;">
+            <h4 style="margin: 0 0 16px; color: var(--ink); text-align: center;">Inclui:</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 10px 0; display: flex; align-items: center; gap: 12px; color: var(--muted);">
+                <span style="color: var(--success); font-weight: bold;">✓</span>
+                Todos os módulos do sistema
+              </li>
+              <li style="padding: 10px 0; display: flex; align-items: center; gap: 12px; color: var(--muted);">
+                <span style="color: var(--success); font-weight: bold;">✓</span>
+                Usuários ilimitados
+              </li>
+              <li style="padding: 10px 0; display: flex; align-items: center; gap: 12px; color: var(--muted);">
+                <span style="color: var(--success); font-weight: bold;">✓</span>
+                Implementação e configuração completa
+              </li>
+              <li style="padding: 10px 0; display: flex; align-items: center; gap: 12px; color: var(--muted);">
+                <span style="color: var(--success); font-weight: bold;">✓</span>
+                Treinamento presencial ou remoto
+              </li>
+              <li style="padding: 10px 0; display: flex; align-items: center; gap: 12px; color: var(--muted);">
+                <span style="color: var(--success); font-weight: bold;">✓</span>
+                Migração de dados existentes
+              </li>
+              <li style="padding: 10px 0; display: flex; align-items: center; gap: 12px; color: var(--muted);">
+                <span style="color: var(--success); font-weight: bold;">✓</span>
+                Integração com ERP/sistemas
+              </li>
+              <li style="padding: 10px 0; display: flex; align-items: center; gap: 12px; color: var(--muted);">
+                <span style="color: var(--success); font-weight: bold;">✓</span>
+                Suporte técnico prioritário
+              </li>
+              <li style="padding: 10px 0; display: flex; align-items: center; gap: 12px; color: var(--muted);">
+                <span style="color: var(--success); font-weight: bold;">✓</span>
+                Atualizações automáticas
+              </li>
+              <li style="padding: 10px 0; display: flex; align-items: center; gap: 12px; color: var(--muted);">
+                <span style="color: var(--success); font-weight: bold;">✓</span>
+                Customizações sob demanda
+              </li>
             </ul>
-            <a href="#contato" class="btn btn-primary" style="width: 100%; justify-content: center;">
-              Começar Agora
-            </a>
           </div>
+
+          <a href="#contato" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 16px 32px;">
+            Solicitar Orçamento Personalizado
+          </a>
         </article>
       </div>
 
       <div style="text-align: center; margin-top: 40px;">
         <p style="color: var(--muted); margin-bottom: 16px;">
-          ✓ Teste gratuito de 15 dias &nbsp;&nbsp;&nbsp; ✓ Sem taxa de setup &nbsp;&nbsp;&nbsp; ✓ Cancelamento a qualquer momento
+          ✓ Demonstração gratuita &nbsp;&nbsp;&nbsp; ✓ Análise sem compromisso &nbsp;&nbsp;&nbsp; ✓ ROI garantido
         </p>
-        <a href="#contato" class="btn btn-ghost">Ver todos os planos</a>
       </div>
     </section>
 
@@ -1052,14 +1218,14 @@
     <section id="contato" class="section">
       <div class="section-header">
         <h2>Solicite uma Demonstração</h2>
-        <p>Converse com nossos especialistas e veja como o MELI pode transformar seu negócio.</p>
+        <p>Converse com nossos especialistas e veja como o Meli WMS pode transformar seu armazém.</p>
       </div>
 
       <div class="contact-form">
         <form id="lead" action="https://formsubmit.co/maduro.felipe@outlook.com" method="POST">
           <input type="hidden" name="_captcha" value="true">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_subject" value="Lead - Demonstração MELI Sistemas">
+          <input type="hidden" name="_subject" value="Lead - Demonstração Meli WMS">
           <input type="hidden" name="_next" value="obrigado.html">
           
           <div class="form-group">
@@ -1078,24 +1244,24 @@
           </div>
 
           <div class="form-group">
-            <label for="empresa">Empresa / Ramo *</label>
-            <input id="empresa" name="Empresa" placeholder="Ex: Agropecuária Silva - Distribuição de Ração" required>
+            <label for="empresa">Empresa / Segmento *</label>
+            <input id="empresa" name="Empresa" placeholder="Ex: LogiCorp - Centro de Distribuição" required>
           </div>
 
           <div class="form-group">
-            <label for="sistema">Sistema de Interesse *</label>
-            <select id="sistema" name="Sistema_Interesse" required>
+            <label for="tamanho">Tamanho do Armazém</label>
+            <select id="tamanho" name="Tamanho_Armazem">
               <option value="">Selecione uma opção</option>
-              <option value="MELI WMS - Gestão de Estoque">MELI WMS - Gestão de Estoque</option>
-              <option value="MELI AGRO - Agropecuária/Pet Shop">MELI AGRO - Agropecuária/Pet Shop</option>
-              <option value="Ambos os sistemas">Ambos os sistemas</option>
-              <option value="Não tenho certeza">Não tenho certeza</option>
+              <option value="Pequeno (até 1000m²)">Pequeno (até 1000m²)</option>
+              <option value="Médio (1000-5000m²)">Médio (1000-5000m²)</option>
+              <option value="Grande (5000-10000m²)">Grande (5000-10000m²)</option>
+              <option value="Muito Grande (acima de 10000m²)">Muito Grande (acima de 10000m²)</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="mensagem">Descreva sua necessidade</label>
-            <textarea id="mensagem" name="Mensagem" rows="4" placeholder="Conte-nos sobre seu negócio atual e principais desafios..."></textarea>
+            <label for="mensagem">Conte-nos sobre sua operação</label>
+            <textarea id="mensagem" name="Mensagem" rows="4" placeholder="Descreva seu armazém atual, principais desafios e necessidades..."></textarea>
           </div>
 
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
@@ -1103,14 +1269,14 @@
               Solicitar Demonstração
             </button>
             <a id="cta-whats-form" class="btn btn-ghost" target="_blank" rel="noopener">
-              WhatsApp
+              WhatsApp Direto
             </a>
           </div>
         </form>
 
         <p style="text-align: center; margin-top: 20px; color: var(--muted); font-size: 0.9rem;">
           Ao enviar, você concorda com nossa <a href="politica-privacidade.html" style="color: var(--brand);">Política de Privacidade</a>.
-          <br>Retornamos em até 7 dias úteis.
+          <br>Retornamos em até 24 horas úteis.
         </p>
       </div>
     </section>
@@ -1119,38 +1285,43 @@
     <section class="section alt">
       <div class="section-header">
         <h2>Perguntas Frequentes</h2>
-        <p>Tire suas principais dúvidas sobre nossos sistemas.</p>
+        <p>Tire suas principais dúvidas sobre o Meli WMS.</p>
       </div>
 
       <div style="max-width: 800px; margin: 0 auto;">
         <details style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); border: 1px solid var(--line);">
-          <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">Como funciona a implementação?</summary>
-          <p style="margin: 0; color: var(--muted);">A implementação é rápida e guiada. Após a contratação, configuramos o sistema em até 48 horas, migramos seus dados existentes e oferecemos treinamento completo para sua equipe.</p>
+          <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">Como funciona a implementação do WMS?</summary>
+          <p style="margin: 0; color: var(--muted);">A implementação é estruturada em 4 fases: (1) Levantamento e configuração da estrutura, (2) Importação de dados e parametrização, (3) Treinamento da equipe, (4) Go-live com suporte dedicado. O processo completo leva de 7 a 15 dias dependendo da complexidade.</p>
         </details>
 
         <details style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); border: 1px solid var(--line);">
-          <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">Posso testar antes de contratar?</summary>
-          <p style="margin: 0; color: var(--muted);">Sim! Oferecemos 15 dias de teste gratuito para você conhecer todas as funcionalidades. Durante o período de teste, você terá suporte completo da nossa equipe.</p>
+          <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">O sistema suporta múltiplos armazéns?</summary>
+          <p style="margin: 0; color: var(--muted);">Sim, o Meli WMS suporta gestão de múltiplos armazéns com controle centralizado. Você pode gerenciar diferentes filiais, centros de distribuição ou depósitos através de uma única interface.</p>
         </details>
 
         <details style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); border: 1px solid var(--line);">
-          <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">Há taxa de setup ou instalação?</summary>
-          <p style="margin: 0; color: var(--muted);">Não cobramos taxas de setup. O valor mensal já inclui implementação, configuração, migração de dados, treinamento e suporte técnico.</p>
+          <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">Posso integrar com meu ERP atual?</summary>
+          <p style="margin: 0; color: var(--muted);">Sim, o Meli WMS possui API REST completa e pode ser integrado com diversos sistemas ERP. Realizamos a integração durante a implementação, garantindo sincronização automática de produtos, estoque e movimentações.</p>
+        </details>
+
+        <details style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); border: 1px solid var(--line);">
+          <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">Há limite de usuários ou produtos?</summary>
+          <p style="margin: 0; color: var(--muted);">Não há limite de usuários simultâneos ou de produtos cadastrados. O sistema é projetado para escalar conforme seu negócio cresce, mantendo alta performance mesmo com milhões de registros.</p>
         </details>
 
         <details style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); border: 1px solid var(--line);">
           <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">Como funciona o suporte técnico?</summary>
-          <p style="margin: 0; color: var(--muted);">Oferecemos suporte humanizado via WhatsApp, telefone e chat. Nossa equipe está disponível de segunda a sexta, das 8h às 18h, com tempo médio de resposta de 30 minutos.</p>
-        </details>
-
-        <details style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); border: 1px solid var(--line);">
-          <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">Posso cancelar a qualquer momento?</summary>
-          <p style="margin: 0; color: var(--muted);">Sim, não há fidelidade. Você pode cancelar a qualquer momento sem multas ou taxas extras. Seus dados ficam seguros por 90 dias após o cancelamento.</p>
+          <p style="margin: 0; color: var(--muted);">Oferecemos suporte prioritário via WhatsApp, telefone e chat de segunda a sexta, das 8h às 18h. Tempo médio de resposta de 15 minutos para questões críticas. Atualizações e melhorias são implementadas automaticamente sem custo adicional.</p>
         </details>
 
         <details style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); border: 1px solid var(--line);">
           <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">O sistema funciona offline?</summary>
-          <p style="margin: 0; color: var(--muted);">Nossos sistemas são baseados na nuvem para máxima segurança e acessibilidade. Algumas funcionalidades críticas continuam funcionando em modo offline limitado.</p>
+          <p style="margin: 0; color: var(--muted);">O Meli WMS é baseado na nuvem para máxima segurança e acessibilidade. O aplicativo mobile possui funcionalidade offline limitada para operações críticas, sincronizando automaticamente quando a conexão é restabelecida.</p>
+        </details>
+
+        <details style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); border: 1px solid var(--line);">
+          <summary style="font-weight: 600; color: var(--brand); cursor: pointer; margin-bottom: 12px;">Quais impressoras de etiquetas são suportadas?</summary>
+          <p style="margin: 0; color: var(--muted);">O sistema suporta impressoras térmicas das principais marcas (Zebra, Argox, Elgin, etc.) com linguagens ZPL e PPLB. Fazemos a configuração e testes durante a implementação para garantir compatibilidade total.</p>
         </details>
       </div>
     </section>
@@ -1159,12 +1330,12 @@
   <footer>
     <div class="wrap" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
       <div>
-        © <span id="year"></span> MELI Sistemas • Transformando gestão em resultados
+        © <span id="year"></span> Meli Sistemas • Transformando gestão de estoque em resultados
       </div>
       <div style="display: flex; gap: 24px; align-items: center;">
         <a href="politica-privacidade.html">Política de Privacidade</a>
         <a id="cta-whats-footer" href="#" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="mailto:melisistemas@outlook.com">melisistemas@outlook.com</a>
+        <a href="/cdn-cgi/l/email-protection#553830393c263c262130383426153a2021393a3a3e7b363a38"><span class="__cf_email__" data-cfemail="6e030b02071d071d1a0b030f1d2e011b1a02010105400d0103">[email&#160;protected]</span></a>
       </div>
     </div>
   </footer>
@@ -1176,17 +1347,17 @@
     </svg>
   </a>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // WhatsApp Configuration
     const WHATS = "5548999320594";
-    const MSG_DEFAULT = encodeURIComponent("Olá! Tenho interesse nos sistemas MELI. Gostaria de uma demonstração.");
+    const MSG_WMS = encodeURIComponent("Olá! Tenho interesse no Meli WMS. Gostaria de uma demonstração e orçamento personalizado.");
     
-    const WURL_DEFAULT = `https://wa.me/${WHATS}?text=${MSG_DEFAULT}`;
+    const WURL_WMS = `https://wa.me/${WHATS}?text=${MSG_WMS}`;
     
     // Set WhatsApp URLs
     ["cta-whats-hero", "cta-whats-form", "cta-whats-footer", "wa-floating"].forEach(id => {
       const el = document.getElementById(id);
-      if (el) el.href = WURL_DEFAULT;
+      if (el) el.href = WURL_WMS;
     });
 
     // Set current year
@@ -1239,7 +1410,7 @@
     }, observerOptions);
 
     // Observe elements for animation
-    document.querySelectorAll('.product-card, .feature-card, .benefit-card').forEach(el => {
+    document.querySelectorAll('.module-card, .feature-card, .benefit-card').forEach(el => {
       observer.observe(el);
     });
   </script>
